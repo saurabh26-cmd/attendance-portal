@@ -191,6 +191,7 @@ def report():
     c.close()
     return render_template("report.html",locations=locs,location=location,year=year,month=month,month_name=calendar.month_name[month],report=report)
 
+init()
+
 if __name__=="__main__":
-    init()
     app.run(host="0.0.0.0",port=int(os.environ.get("PORT",5000)),debug=True)
